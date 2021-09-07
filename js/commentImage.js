@@ -125,7 +125,7 @@ $(document).ready(() => {
         insertHtml(totalHtmlToAppend);
       },
       error: function (error) {
-        alert(error);
+        
       },
     });
   });
@@ -174,7 +174,7 @@ $(document).ready(() => {
         prependHtml(sessionStorage_username, now, comment);
       },
       error: function (error) {
-        alert(error);
+       
       },
     });
   });

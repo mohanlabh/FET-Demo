@@ -22,7 +22,7 @@ function userCheck() {
       }
     },
     error: function (error) {
-      alert(error);
+   
     },
   });
 }
@@ -70,7 +70,7 @@ function signUp() {
               alert("Registered successfully");
             },
             error: function (error) {
-              alert(error);
+          
             },
           });
         } else {
@@ -86,7 +86,7 @@ function signUp() {
         }
       },
       error: function (error) {
-        alert(error);
+    
       },
     });
   } else {
@@ -104,7 +104,6 @@ function signIn() {
   var emailMatch = mailPattern.test(username);
   var phoneMatch = phonePattern.test(username);
   if (emailMatch === true) {
-    console.log("text entered is email");
     var uemail = username;
     url.searchParams.append("email", uemail);
     url.searchParams.append("password", password);
@@ -163,7 +162,6 @@ function signIn() {
         }
       },
       error: function (error) {
-        alert(error);
       },
     });
   } else {
@@ -176,9 +174,7 @@ function validateSignIn() {
   var mailPattern = /^(^[A-Za-z0-9]+@+[A-Za-z]+.+([A-Za-z])$)$/;
   var phonePattern = /^([7-9]{1}[0-9]{9})$/;
   var emailMatch = mailPattern.test(emailphone);
-  var phoneMatch = phonePattern.test(emailphone);
-  console.log(emailMatch);
-  console.log(phoneMatch);
+  var phoneMatch = phonePattern.test(emailphone)
   if (emailMatch === true) {
     var email = emailphone;
     return email;
@@ -287,7 +283,6 @@ function editProfile() {
         alert("Data Updated successfully...");
       },
       error: function (error) {
-        alert(error);
       },
     });
   } else {

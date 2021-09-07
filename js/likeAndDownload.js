@@ -42,9 +42,7 @@ $(document).ready(function () {
             }
           }
         },
-        error: (error) => {
-          alert(error);
-        },
+        error: (error) => {},
       });
     }
   }
@@ -80,14 +78,10 @@ $(document).ready(function () {
               updateLikeCount(imgId, "decrement");
             }
           },
-          error: (error) => {
-            alert(error);
-          },
+          error: (error) => {},
         });
       },
-      error: (error) => {
-        alert(error);
-      },
+      error: (error) => {},
     });
   }
 
@@ -135,14 +129,10 @@ $(document).ready(function () {
 
           data: JSON.stringify(data1),
           success: (response) => {},
-          error: (error) => {
-            alert(error);
-          },
+          error: (error) => {},
         });
       },
-      error: (error) => {
-        alert(error);
-      },
+      error: (error) => {},
     });
   }
 
@@ -165,11 +155,8 @@ $(document).ready(function () {
         console.log("img obj->", response);
         $("#" + e.target.id).attr("href", response.data);
         var href = $("#" + e.target.id).attr("href");
-        alert(href);
       },
-      error: (error) => {
-        alert(error);
-      },
+      error: (error) => {},
     });
   }
 });

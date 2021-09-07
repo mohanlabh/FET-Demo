@@ -1,5 +1,5 @@
-projectKey=FET_Angular_Group_6
+projectKey=FET_Angular_Groups_6
 serverUrl=http://172.27.12.78
-dashboardUrl=http://172.27.12.78/dashboard/index/FET_Angular_Group_6
-ceTaskId=AXu_rFl1Kuq3PT_e_zj4
-ceTaskUrl=http://172.27.12.78/api/ce/task?id=AXu_rFl1Kuq3PT_e_zj4
+dashboardUrl=http://172.27.12.78/dashboard/index/FET_Angular_Groups_6
+ceTaskId=AXvAelBLKuq3PT_e_zkF
+ceTaskUrl=http://172.27.12.78/api/ce/task?id=AXvAelBLKuq3PT_e_zkF

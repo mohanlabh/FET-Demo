@@ -66,7 +66,7 @@ $("#activitylog_btn").click(() => {
         }
       },
       error: function (error) {
-        alert(error);
+        
       },
     });
   }

@@ -65,8 +65,6 @@ $(document).ready(() => {
         }
       });
     },
-    error: function (error) {
-      alert("error occured during fetching the record");
-    },
+    error: function (error) {},
   });
 });

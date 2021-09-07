@@ -112,7 +112,6 @@ $("#upload-form").submit(function (event) {
       alert("Image uploaded successfully");
     },
     error: function (error) {
-      alert(error);
     },
   });
 });
