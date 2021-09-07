@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #ff4c68;
+  background-size: cover;
+}
+
+.row {
+  background: white;
+  border-radius: 30px;
+}
+
+img {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.btn1 {
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  background-color: #ff4c68;
+  color: black;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn1:hover {
+  background: white;
+  border: 1px solid;
+  color: pink;
+}
+
+.form-box {
+  margin: auto;
+  padding: 22px 22px 22px 22px;
+  width: 50%;
+  border-radius: 5px;
+  background: white;
+  top: 170px;
+  position: absolute;
+  right: 20px;
+  left: 20px;
+}
+
+.form-div {
+  right: 50px;
+}
+/*# sourceMappingURL=index.css.map */

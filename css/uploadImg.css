@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:500,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+.upload-img-wrapper {
+  background: #ff4c68;
+  -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.15);
+  border-radius: .75em;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.upload-img-wrapper form {
+  width: 80%;
+}
+
+.upload-img-wrapper form h2 {
+  color: #3e3f5e;
+  text-align: center;
+}
+
+.upload-img-wrapper form .left_side .drag-area {
+  font-family: "Poppins", sans-serif;
+  border: 3px dashed pink;
+  position: absolute;
+  top: 10%;
+  right: 49%;
+  width: 49%;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px auto;
+}
+
+.upload-img-wrapper form .left_side .drag-area .visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.upload-img-wrapper form .left_side .drag-area input.visually-hidden:focus + label {
+  outline: thin dotted;
+}
+
+.upload-img-wrapper form .left_side .drag-area input.visually-hidden:focus-within + label {
+  outline: thin dotted;
+}
+
+.upload-img-wrapper form .left_side .drag-area .active {
+  border: 2px solid pink;
+}
+
+.upload-img-wrapper form .left_side .drag-area .icon {
+  font-size: 100px;
+  color: pink;
+}
+
+.upload-img-wrapper form .left_side .drag-area span {
+  font-size: 21px;
+  font-weight: 500;
+  color: pink;
+  margin: 13px 0 15px 0;
+}
+
+.upload-img-wrapper form .left_side .drag-area button {
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.upload-img-wrapper form .left_side .drag-area img {
+  height: 250px;
+  width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.upload-img-wrapper form .right_side .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: .75em 0;
+  position: relative;
+}
+
+.upload-img-wrapper form .right_side .form-row fieldset {
+  border-color: 2px solid pink;
+  font-size: inherit;
+  padding-bottom: 14px;
+  border-radius: 14px;
+  color: #fff;
+}
+
+.upload-img-wrapper form .right_side .form-row input, .upload-img-wrapper form .right_side .form-row select {
+  border-radius: .5em;
+  padding: 1em .5em;
+  width: 100%;
+  font-family: inherit;
+  font-weight: bold;
+  -webkit-transition: 100ms ease all;
+  transition: 100ms ease all;
+  width: 100%;
+  border: 0.2em solid pink;
+}
+
+.upload-img-wrapper form .right_side .form-row input:valid + span, .upload-img-wrapper form .right_side .form-row select:valid + span {
+  top: 0;
+  font-size: .90rem;
+}
+
+.upload-img-wrapper form .right_side .form-row input:focus + span, .upload-img-wrapper form .right_side .form-row select:focus + span {
+  top: 0;
+  color: #7b5dfa;
+  font-weight: 600;
+}
+
+.upload-img-wrapper form .right_side .form-row input:focus:invalid, .upload-img-wrapper form .right_side .form-row select:focus:invalid {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  top: 50%;
+}
+
+.upload-img-wrapper form .right_side .form-row input:focus:valid, .upload-img-wrapper form .right_side .form-row select:focus:valid {
+  top: 0;
+}
+
+.upload-img-wrapper form .right_side .form-row input:required, .upload-img-wrapper form .right_side .form-row select:required {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.upload-img-wrapper form .right_side .form-row input:focus, .upload-img-wrapper form .right_side .form-row select:focus {
+  border-color: #7b5dfa;
+  outline: none;
+}
+
+.upload-img-wrapper form .right_side .form-row button {
+  border-radius: .5em;
+  width: 100%;
+  font-family: inherit;
+  background-color: #7b5dfa;
+  border: .10em solid #7b5dfa;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.upload-img-wrapper form .right_side .form-row button:focus {
+  border: 0.1em solid #533cf8;
+  outline: none;
+}
+
+.upload-img-wrapper form .right_side .form-row button:hover {
+  background: #6744f9;
+}
+
+@media screen and (max-width: 768px) {
+  .upload-img-wrapper form .left_side .drag-area {
+    position: inherit;
+    width: auto;
+  }
+}
+/*# sourceMappingURL=uploadImg.css.map */

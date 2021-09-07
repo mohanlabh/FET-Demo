@@ -1,0 +1,31 @@
+@import 'config';
+
+
+body {
+  background-color: $bodyContent_color;
+}
+
+
+.NavMenuBar {
+  color: $sidebar_color !important;
+  font-size: 32px !important;
+}
+
+.sidebar {
+  background-color: $sidebar_color;
+  position: fixed;
+  height: 100%;
+  width: 12.5rem;
+  z-index: 10;
+}
+
+.Content {
+  margin-left: 3.125rem;
+  margin-top: 4.375rem;
+  z-index: 6;
+  display: none;
+}
+
+#sidebar.active {
+  margin-left: -17rem;
+}

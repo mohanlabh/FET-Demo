@@ -1,0 +1,65 @@
+.col-md-4 {
+	padding-top: 2.5rem;
+	height: 33.75rem;
+	margin-right: 3rem;
+	border-radius: 1.25rem;
+	width: 32.25rem;
+	margin-left: 0.688rem;
+}
+.card {
+	border-radius: 1.25rem;
+	padding: 2rem;
+	background: #ff4c68;
+}
+@media (min-width: 375px) {
+	#profile_image {
+	  margin-left: 2.485rem;
+	}
+}
+  
+@media (min-width: 576px) {
+	.col-md-4 {
+		margin-left: 0.75rem;
+	}
+	#profile_image {
+		margin-left: 6.875rem;
+	}
+}
+@media (min-width: 768px) {
+	.col-md-4 {
+		margin-left: 6.25rem;
+	}
+}
+@media (min-width: 992px) {
+	.col-md-4 {
+		margin-left: auto;
+	}
+	.card {
+		width: 30rem;
+	}
+	#profile_image {
+		margin-left: 6.875rem;
+	}
+}
+@media (min-width: 1200px) {
+	.col-md-4 {
+		margin-left: 18.75rem;
+	}
+	.card {
+		width: 30rem;
+	}
+	#profile_image {
+		margin-left: 6.875rem;
+	}
+}
+@media (min-width: 1400px) {
+	.col-md-4 {
+		margin-left: 23.75rem;
+	}
+	.card {
+		width: 30rem;
+	}
+	#profile_image {
+		margin-left: 6.875rem;
+	}
+}

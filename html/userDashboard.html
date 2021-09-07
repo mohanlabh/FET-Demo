@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- favicaon new add -->
+    <link rel="icon" href="/favicon.ioc" type="image/x-icon"> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../css/userDashboard.css"/>
+    <link rel="stylesheet" href="../css/uploadImg.css">
+    <link rel="stylesheet" href="../css/activitylog.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/postuserGallery.css">
+    <title>Dashboard</title>
+    <script src="../js/disablebackclickpage.js"></script>
+  </head>
+  <body onload="displayUser();  displayDayTime();">
+     
+    <nav
+      class="navbar sticky-top shadow-sm navbar-expand-lg navbar-light bg-light"
+    >
+      <div class="container-fluid">
+        <a id="NavMenuBar" class="navbar-brand NavMenuBar" href="#"
+          ><em class="fa fa-bars"></em 
+        ></a>
+        <div class="media d-flex">
+          <div class="media-body px-2 float-left">
+            <h4 class="m-0 pt-3 text-dark" id="navname"></h4>
+            <p class="font-weight-normal text-muted mb-0 float-left" id="navemail">
+            </p>
+          </div>
+          <img
+            src="../img/profile.jpg"
+            class="mr-3 rounded-circle img-thumbnail shadow-sm float-left"
+            width="90"
+            height="90"
+            alt="..."
+            id="image_btn"
+          />
+        </div>
+      </div>
+    </nav>
+
+
+      <!-- Vartical NavBar -->
+
+    <div class="vertical-nav sidebar " id="sidebar">
+      <p class="text-white h2 font-weight-bold align-item-center text-uppercase px-3 small pb-4 mb-0 pt-4">Menu</p>
+      <ul class="nav flex-column  mb-0">
+        <li class="nav-item">
+          <a href="../html/imageExplorer.html" class="nav-link text-white" id="dashboard_btn"
+            ><em  class="fas m-2 fa-home"></em >Gallery</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" id="activitylog_btn"
+            ><em  class="fas m-2 fa-history"></em > Activity Log
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" id="uploadImg_btn"
+            ><em  class="fas m-2 fa-upload"></em >Upload Image
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" id="post_btn"
+            ><em  class="fas m-2 fa-images"></em > Post
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" id="editProfile_btn"
+            ><em  class="fas m-2 fa-edit"></em >Edit Profile
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-white" id="logout_btn"
+           onclick="signOut();" ><em  class="fas m-2 fa-sign-out-alt"></em >Logout
+          </a>
+        </li>
+        <ul class="nav justify-content-center py-5">
+          <li nav-item>
+            <a href="http://www.instagram.com" class="nav-link text-white"
+              ><em  class="fab fa-instagram fa-lg"></em 
+            ></a>
+          </li>
+          <li nav-item>
+            <a href="http://www.facebook.com" class="nav-link text-white"
+              ><em  class="fab fa-facebook-square fa-lg"></em 
+            ></a>
+          </li>
+          <li nav-item>
+            <a href="http://www.twitter.com" class="nav-link text-white"
+              ><em  class="fab fa-twitter-square fa-lg"></em 
+            ></a>
+          </li>
+      </ul>
+    </div>
+   
+
+
+    <div id="content" class="conent">
+
+      
+      <div class="container dashboard">
+        <h1 class="fw-light text-xs-center text-center mt-4 mb-0">Dashboard</h1>
+        <hr class="mt-2 mb-5">
+        <div class="row text-center text-lg-start">
+          <div class="row text-center text-lg-start">
+          
+            <p class="h1 text-center fw-bolder">Welcome <span class="fs-danger" id="loggedUsername"></span>,<span id="dayWish"></span></p><br>
+            <span id="dateTime" class="text-center "></span>
+            <div class="text-center" id="imgDayWish">
+              
+            
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+       <div class="container posts">
+         <h1 class="fw-light text-center  mt-4 mb-0">Posts</h1>
+         <hr class="mt-2 mb-5">
+         <div class="row text-center text-lg-start">
+           <div class="row text-center text-lg-start">
+         
+             <div class="container-lg post-galary-wrapper">
+              <div class="row gy-4 row-cols-1 row-cols-1-sm-2 row-cols-md-3 post-galary-elements">
+
+              </div>
+             </div>
+           </div>
+         </div>
+       </div>
+
+     <div class="container uploadImg">
+       <h1 class="fw-light text-center  mt-4 mb-0">Upload Images</h1>
+       <hr class="mt-2 mb-5">
+       <div class="row text-center text-lg-start">
+         <div class="row text-center text-lg-start" id="#upload-md">
+        
+
+           <div class="upload-img-wrapper container">
+            <form class="row" id="upload-form">
+    
+                <div class="left_side col-md row-sm-1">
+                
+                    <div class="drag-area col col-sm " id="upload-drag-area">
+                        <div class="icon"><em  class="fas fa-cloud-upload-alt"></em ></div>
+
+                        <header id="upload-header ">Drag & Drop Image File</header>
+                        
+                        <span>OR</span>
+    
+                        <input type="file" class="visually-hidden upload-data" id="fileElem" required>
+
+                        <label for="fileElem">Browse</label>
+    
+                    </div>
+                
+                </div>
+                
+                <br/>
+                
+                <div class="right_side col-md row-sm-1">
+                    
+                    <div class="form-row row">
+                        <fieldset>
+                            <legend>Category</legend>
+
+                            <select class="form-select upload-data" placeholder="category" id="categorySelect">
+                                <option value="nature">Nature</option>
+                                <option value="animals">Animals</option>
+                                <option value="technology">Technology</option>
+                            </select>
+                        </fieldset>
+                        
+                    </div>
+            
+                    <div class="form-row row">
+                        <fieldset>
+                            <legend>Caption</legend>
+                            <input class="form-control upload-data" type="text" placeholder="caption" id="captionSelect" required>
+                        </fieldset>
+                    
+                    </div>
+            
+                    <div class="form-row row">
+                        <fieldset>
+                            <legend>#tag</legend>
+                            <input class="form-control upload-data" type="text" placeholder="#tag" id="hashtagSelect" pattern="#+[a-zA-Z0-9(_)]{1,}" required>
+                        </fieldset>
+
+                    </div>
+            
+                    <div class="form-row row"></div>
+                    
+                    <div class="form-row row"> 
+                        <button class="btn col col-sm" type="submit">Upload</button>
+                        &nbsp;&nbsp;
+                        <button class="btn col col-sm" class="reset-upload" type="reset" id="upload-reset">Cancel</button>
+                    </div>
+            
+                </div>
+                    
+            </form>
+          </div>
+         </div>
+       </div>
+     </div>
+     
+     <div class="container activitylog">
+       <h1 class="fw-light text-center  mt-4 mb-0">Activity Log</h1>
+       <hr class="mt-2 mb-5">
+       <div class="row text-center text-lg-start">
+         <div class="row text-center text-lg-start">
+     
+           <div class=table_background>
+
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search By Tags.."><br><br>
+  
+            <table id=myTable class="table table-hover" >
+              <thead>
+                <tr>
+                  <th scope="col">Image Id</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Author</th>
+                  <th scope="col">Categories</th>
+                  <th scope="col">Tags</th>
+                  <th scope="col">Uploaded Date</th>
+                  <th scope="col">Comment</th>
+                  <th scope="col">Comment Date</th>
+                  <th scope="col">Likes</th>
+                </tr>
+              </thead>
+              
+                 <tbody id="body">
+                </tbody> 
+               
+            </table>
+          </div>
+         </div>
+       </div>
+     </div>
+  
+     <div class="container editprofile">
+       <h1 class="fw-light text-center mt-4 mb-0">Edit Profile</h1>
+       <hr class="mt-2 mb-2">
+       <div class="row text-center text-lg-start">
+         <div class="row text-center text-lg-start ">
+          <div class="col-md-4">
+            <div class="card">
+              <form  onsubmit="editProfile()">
+                <div class="card-body">
+                  <div class="form-row row mb-3">
+                    <fieldset>
+                        <legend class="text-light h4"><em  class="fas fa-user-edit"></em >&nbsp Name</legend>
+                        <input class="form-control upload-data " type="text" placeholder="Change Your Name" id="cname">
+                    </fieldset>
+                  </div>
+                  <div class="form-row row mb-3">
+                    <fieldset>
+                        <legend class="text-light h4"><em  class="fas fa-envelope"></em >&nbsp Email</legend>
+                        <input class="form-control upload-data" type="text" placeholder="Unique Id Is Not Changeable" id="cemail" readonly>
+                    </fieldset>
+                  </div>
+                  <div class="form-row row mb-3">
+                    <fieldset>
+                        <legend class="text-light h4"><em  class="fas fa-mobile-alt"></em >&nbsp Phone</legend>
+                        <input class="form-control upload-data" type="text" placeholder="Change Your Mobile" id="cmobile" required maxlength="10"  pattern ="[7-9]{1}[0-9]{9}" >
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <button class="btn col col-sm w-100 bg-dark text-light" type="submit" id="saveEdit_btn" >Save Edit&nbsp<em  class="far fa-edit"></em ></button>
+                </div>
+              </form>
+            </div>
+           </div>
+          </div>
+        </div>
+     </div>
+     
+    <div class="container profilepage">
+      <h1 class="fw-light text-center  mt-2 mb-0">Profile Page</h1>
+      <hr class="mt-1 mb-1">
+      <div class="row text-center text-lg-start">
+        <div class="row text-center text-lg-start">
+        <div class="col-md-4">
+          <div class="card">
+            <img
+            src="../img/profile.jpg"
+            class="mr-3 rounded-circle img-thumbnail shadow-sm"
+            width="180"
+            height="180"
+            alt="..."
+            id="profile_image"
+          />
+            <div class="card-body">
+              <div class="form-row row mb-3">
+                <fieldset>
+                    <legend class="text-light h4"><em  class="fas fa-user"></em >&nbsp Name</legend>
+                    <input class="form-control upload-data " type="text" placeholder="Change Your Name"  readonly id="pname">
+                </fieldset>
+              </div>
+              <div class="form-row row mb-3">
+                <fieldset>
+                    <legend class="text-light h4"><em  class="fas fa-envelope"></em >&nbsp Email</legend>
+                    <input class="form-control upload-data" type="text" placeholder="Change Your Email" readonly id="pemail">
+                </fieldset>
+              </div>
+              <div class="form-row row">
+                <fieldset>
+                    <legend class="text-light h4"><em  class="fas fa-mobile-alt"></em >&nbsp Phone</legend>
+                    <input class="form-control upload-data" type="text" placeholder="Change Your Mobile" readonly id="pphone">
+                </fieldset>
+              </div>
+            </div>
+            </div>
+        </div>
+          </div>
+        </div>
+      </div>           
+    </div>
+
+   
+   </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script src="../js/userDashboard.js"></script>
+    <script src="../js/dashboardToggle.js"></script>
+    <script src="../js/dragAndDrop.js"></script>
+   <script src="../js/user.js"></script>
+   <script src="../js/userpostGallery.js"></script>
+   <script src="../js/activitylog.js"></script>
+  </body>
+</html>

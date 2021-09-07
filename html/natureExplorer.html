@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+        crossorigin="anonymous"
+      />
+
+      <link
+        rel="stylesheet"
+        href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+        crossorigin="anonymous"
+      />
+
+      <link rel="stylesheet" href="../css/imageExplorer.css" />
+      <link rel="stylesheet" href="../css/likeDownloadAndComment.css" />
+
+      <title>Nature Gallery</title>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-xl navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">Pixels</a>
+        </div>
+        <div class="tm-hero d-flex" data-parallax="scroll">
+          <form class="d-flex tm-search-form form-inline">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search different kinds of images"
+              id="filter"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </nav>
+
+      <div id="modal-form">
+        <div
+          class="modal fade"
+          id="myModal"
+          tabindex="-1"
+          aria-labelledby="myModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="myModalLabel">New message</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <div class="modal-body">
+                <div class="mb-3" style="display: none">
+                  <label for="recipient-name" class="col-form-label"
+                    >User:</label
+                  >
+                  <input type="text" class="form-control" id="recipient-name" />
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label"
+                    >Add a comment</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="comment-message-text"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary" id="addComment">
+                  Save Comment
+                </button>
+              </div>
+
+              <div id="comments-container"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="gallery min-vh-100">
+        <div class="row mb-4 justify-content-center">
+          <h1 class="col-3">Latest Pictures</h1>
+          <div>
+            <button
+              type="button"
+              class="btn btn-outline-dark btn-lg backbutton"
+              onclick="goBack()"
+            >
+              <i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Back
+            </button>
+          </div>
+        </div>
+
+        <div class="container-lg nature-galary-wrapper">
+          <div
+            class="
+              row
+              gy-4
+              row-cols-1 row-cols-1-sm-2 row-cols-md-3
+              nature-galary-elements
+            "
+          ></div>
+        </div>
+      </section>
+
+      <div
+        class="modal fade"
+        id="gallery-model"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered model-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <img src="../img/animal1.jpg" class="model-img" alt="model img" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: #ff4c68">
+          <i class="media-icons fab fa-twitter"></i>
+          <i class="media-icons fab fa-instagram"></i>
+          <i class="media-icons fab fa-facebook-f"></i>
+          <i class="media-icons fas fa-envelope"></i>
+          <p>&copy 2021 Pixels</p>
+        </div>
+      </footer>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"
+      ></script>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"
+      ></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="../js/search.js"></script>
+      <script src="../js/imageExplorer.js"></script>
+      <script src="../js/categoryExplorer/natureGallery.js"></script>
+      <script src="../js/commentImage.js"></script>
+      <script src="../js/likeAndDownload.js"></script>
+    </body>
+  </html>
+</html>

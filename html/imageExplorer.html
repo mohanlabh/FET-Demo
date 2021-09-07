@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/imageExplorer.css">
+
+     
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+
+    <title>Image Explorer</title>
+  </head>
+  <body onload="logOff()" >
+    <nav class="navbar navbar-expand-xl navbar-dark ">
+      <div class="container-fluid">
+        <a class="navbar-brand" >Pixels</a>
+      </div>
+      <div class="tm-hero d-flex " data-parallax="scroll">
+        <form class="d-flex tm-search-form form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search different kinds of images" id="filter" aria-label="Search">
+        </form>
+    </div>
+    <div id="logOff">
+     
+    </div>
+    </nav>
+
+  
+    
+
+
+  <section class="gallery min-vh-100">
+    <button type="button" class="btn btn-outline-dark btn-lg backbutton " onclick="returnToPage()"><i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Back</button>
+    <div class="container-fluid tm-container-content tm-mt-60">
+      <div class="row mb-4 justify-content-center">
+        <h1 class="col-6 ">
+          Explore the best categories of images
+        </h1>
+      </div>
+  
+        
+        <div class="container-lg ">
+           <div class="row row-cols-1 row-cols-1-sm-2 row-cols-md-3">
+               <div class="col hovereffect #1 #animals animals">
+                   <a href="../html/animalExplorer.html">
+                   <img class="img-responsive" src="../img/animal1.jpg"  class="gallery-item" alt="gallery">
+                   <div class="overlay">
+                    <h2>Animals</h2>
+                 </div>
+                  </a>
+               </div>
+
+               <div class="col hovereffect #2 #nature nature">
+                   <a href="../html/natureExplorer.html">
+                <img class="img-responsive" src="../img/nature2.jpg" class="gallery-item" alt="gallery">
+                <div class="overlay">
+                  <h2>Nature</h2>
+               </div>
+            </a>
+            </div>
+            <div class="col hovereffect #3 #technology technology">
+                <a href="../html/technologyExplorer.html">
+                <img class="img-responsive" src="../img/technology1.jpg" class="gallery-item" alt="gallery">
+                <div class="overlay">
+                  <h2>Technology</h2>
+               </div>
+                </a>
+            </div>
+            
+           </div> 
+        </div>
+    </section>
+
+
+     
+    <footer class="footer-explorer bg-dark text-center text-lg-start">
+  
+      <div class="text-center p-3" style="background-color: #ff4c68;">
+        <i class="media-icons fab fa-twitter " ></i>
+        <i class="media-icons fab fa-instagram"></i>
+          <i class="media-icons fab fa-facebook-f"></i>
+        <i class="media-icons fas fa-envelope"></i>
+          <p>&copy 2021 Pixels</p>
+      </div>
+    
+    </footer>
+  
+   
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/imageExplorer.js"></script>
+    <script src="../js/user.js"></script>
+
+
+  </body>
+</html>
