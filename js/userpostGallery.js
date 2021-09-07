@@ -5,7 +5,6 @@ $(document).ready(() => {
   }
 
   var uId = getusers().id;
-  console.log(uId);
   let post_container = $(".post-galary-wrapper  .post-galary-elements");
   $.ajax({
     type: "GET",
