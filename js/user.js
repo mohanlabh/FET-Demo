@@ -20,10 +20,7 @@ function userCheck() {
           phoneArr.push(phone_data);
         }
       }
-    },
-    error: function (error) {
-   
-    },
+    }
   });
 }
 userCheck();
@@ -84,10 +81,7 @@ function signUp() {
             alert(uphone + " & " + uemail + " is already registered with us");
           }
         }
-      },
-      error: function (error) {
-    
-      },
+      }
     });
   } else {
     alert("please enter details to continue");
@@ -160,9 +154,7 @@ function signIn() {
             }
           }
         }
-      },
-      error: function (error) {
-      },
+      }
     });
   } else {
     alert("no data entered ");

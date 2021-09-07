@@ -123,10 +123,7 @@ $(document).ready(() => {
         }
 
         insertHtml(totalHtmlToAppend);
-      },
-      error: function (error) {
-        
-      },
+      }
     });
   });
 
@@ -172,10 +169,7 @@ $(document).ready(() => {
         comments.push(addObj);
 
         prependHtml(sessionStorage_username, now, comment);
-      },
-      error: function (error) {
-       
-      },
+      }
     });
   });
 });

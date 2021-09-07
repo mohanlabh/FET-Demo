@@ -110,8 +110,6 @@ $("#upload-form").submit(function (event) {
     contentType: "application/json",
     success: function (response) {
       alert("Image uploaded successfully");
-    },
-    error: function (error) {
-    },
+    }
   });
 });

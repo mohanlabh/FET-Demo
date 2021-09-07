@@ -64,10 +64,7 @@ $("#activitylog_btn").click(() => {
             $("tbody").append(str);
           }
         }
-      },
-      error: function (error) {
-        
-      },
+      }
     });
   }
 });

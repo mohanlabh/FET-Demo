@@ -41,8 +41,7 @@ $(document).ready(function () {
                 "Like" + " " + response.uploadedImg[i].likesCount;
             }
           }
-        },
-        error: (error) => {},
+        }
       });
     }
   }
@@ -77,11 +76,9 @@ $(document).ready(function () {
             } else {
               updateLikeCount(imgId, "decrement");
             }
-          },
-          error: (error) => {},
+          }
         });
-      },
-      error: (error) => {},
+      }
     });
   }
 
@@ -131,8 +128,7 @@ $(document).ready(function () {
           success: (response) => {},
           error: (error) => {},
         });
-      },
-      error: (error) => {},
+      }
     });
   }
 
@@ -155,8 +151,7 @@ $(document).ready(function () {
         console.log("img obj->", response);
         $("#" + e.target.id).attr("href", response.data);
         var href = $("#" + e.target.id).attr("href");
-      },
-      error: (error) => {},
+      }
     });
   }
 });
