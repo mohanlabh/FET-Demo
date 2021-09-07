@@ -14,7 +14,7 @@ $(document).ready(() => {
     url: "http://localhost:3000/uploadedImg?category=technology",
     contentType: "application/json",
     success: function (result) {
-      console.log(result);
+      
 
       let elemArr = JSON.parse(JSON.stringify(result));
 

@@ -33,8 +33,7 @@ $(document).ready(function () {
                 document.getElementById(allLikeBtns[i].id).style.color = "red";
                 document.getElementById(allLikeBtns[i].id).innerHTML =
                   "Liked" + " " + response.uploadedImg[i].likesCount;
-              } else {
-              }
+              } 
             }
             if (liked == false) {
               document.getElementById(allLikeBtns[i].id).innerHTML =
@@ -148,7 +147,6 @@ $(document).ready(function () {
       dataType: "json",
       contentType: "application/json",
       success: (response) => {
-        console.log("img obj->", response);
         $("#" + e.target.id).attr("href", response.data);
         var href = $("#" + e.target.id).attr("href");
       }

@@ -63,7 +63,6 @@ function signUp() {
             dataType: "json",
             contentType: "application/json",
             success: function (response) {
-              console.log("Registered successfully");
               alert("Registered successfully");
             },
             error: function (error) {

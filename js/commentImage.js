@@ -105,7 +105,6 @@ $(document).ready(() => {
       success: function (result) {
         gotJsonResult = result;
 
-        console.log("get gotJsonResult==>", gotJsonResult);
         let elemArr = JSON.parse(JSON.stringify(result));
         comments = elemArr.comments;
 
