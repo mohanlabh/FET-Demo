@@ -1,144 +1,107 @@
-@import 'config';
+@import "config";
 
-
-//body section 
-body{
-    font-family: $font-family1;
+body {
+  font-family: $font-family1;
 }
 
-
-.title{
-    background-color: $primary-color;
-    color: $secondary-color;
-    .container-fluid{
-        padding: 3% 15%  ; 
-    }
+.title {
+  background-color: $primary-color;
+  color: $secondary-color;
+  .container-fluid {
+    padding: 3% 15%;
+  }
 }
 
-
-h1{
-    font-family: $font-family1;
-    font-size: 3rem;
-    line-height: 1.5;
+h1 {
+  font-family: $font-family1;
+  font-size: 3rem;
+  line-height: 1.5;
 }
 
-h3{
-    font-family: $font-family1;
+h3 {
+  font-family: $font-family1;
 }
-p{
-    color: $tertiary-color;
+p {
+  color: $tertiary-color;
 }
 
-// footer section
 #footer {
-    padding: 7% 15%;
+  padding: 7% 15%;
+  text-align: center;
+}
+
+.navbar {
+  padding-bottom: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: $font-family2;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+.nav-link {
+  font-size: 1.2rem;
+  font-family: $primary-color;
+}
+
+.banner-button {
+  margin: 5% 6% 15% 0;
+}
+
+.title-image {
+  width: 80%;
+  transform: rotate(25deg);
+  right: 10%;
+}
+
+#features {
+  padding: 7% 15%;
+  background-color: $secondary-color;
+  position: relative;
+
+  .feature-container {
     text-align: center;
+    padding: 5%;
+  }
 }
 
+#pricing {
+  padding: 100px;
+  text-align: center;
 
-
-
-
-//Navbar 
-
-.navbar{
-    padding-bottom: 0 0 4.5rem;
+  .pricing-column {
+    padding: 3% 2%;
+  }
 }
 
-
-.navbar-brand{
-    font-family: $font-family2;
-    font-size: 2.5rem;
-    font-weight: bold;
-    }
-
-    .nav-item {
-        padding: 0 18px;
-    }
-.nav-link{
-    font-size: 1.2rem;
-    font-family: $primary-color;
-
+#cta {
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 7% 15%;
+  text-align: center;
+}
+.cta-heading {
+  font-family: $font-family2;
+  font-size: 3.5rem;
+  line-height: 1.5;
 }
 
-
-
-// Download  & register Buttons
-.banner-button{
-    margin: 5% 6% 15% 0;
-}
-// .banner-button{
-//     margin: 5% 3% 3% 30px;
-// }
-
-
-
-
-
-.title-image{
-    width: 80%;
-     transform: rotate(25deg);
-        right: 10%;
-    //  position: relative;
-    // margin-left: 50%;
+.media-icons {
+  margin: 20px 10px;
+  height: 80%;
+  text-decoration: none;
 }
 
-//feature section
-#features{
-    padding: 7% 15%;
-    background-color: $secondary-color;
-    position: relative;
-
-    .feature-container{
-        text-align: center;
-        padding: 5%;
-    }
-}
-
-
-// pricing section 
-
-#pricing{
-    padding: 100px;
+@media (max-width: 1180px) {
+  #title {
     text-align: center;
-
-    .pricing-column{
-        padding: 3% 2%;;
-
-    }
-}
-
-
-//Cta section
-#cta{
-    background-color: $primary-color;
-    color: $secondary-color;
-    padding: 7% 15%;
-    text-align: center;
-}
-.cta-heading{
-    font-family: $font-family2;
-    font-size: 3.5rem;
-    line-height: 1.5;
-}
-
-
-//media icons 
-.media-icons{
-    margin: 20px 10px;
-   height: 80%;
-   text-decoration: none;
-
-}
-
-//Title-image   
-
-@media (max-width: 1180px){
-    #title{
-        text-align: center;
-    }
-    .title-image{
-        position: static;
-        transform: rotate(0);
-    }
+  }
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
 }

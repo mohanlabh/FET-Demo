@@ -94,15 +94,15 @@ section {
   left: 0;
   opacity: 0;
   background-color: rgba(248, 167, 224, 0.5);
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .hovereffect img {
   display: block;
   position: relative;
-  -webkit-transition: all .4s linear;
-  transition: all .4s linear;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }
 
 .hovereffect h2 {
@@ -114,8 +114,8 @@ section {
   background: #ff4c68;
   -webkit-transform: translatey(-100px);
           transform: translatey(-100px);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   padding: 20px;
 }
 

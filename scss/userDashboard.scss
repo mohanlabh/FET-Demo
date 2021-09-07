@@ -1,10 +1,8 @@
-@import 'config';
-
+@import "config";
 
 body {
   background-color: $bodyContent_color;
 }
-
 
 .NavMenuBar {
   color: $sidebar_color !important;
