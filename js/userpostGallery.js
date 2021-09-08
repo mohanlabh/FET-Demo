@@ -5,17 +5,17 @@ $(document).ready(() => {
   }
 
   var uId = getusers().id;
-  let post_container = $(".post-galary-wrapper  .post-galary-elements");
+  const post_container = $(".post-galary-wrapper  .post-galary-elements");
   $.ajax({
     type: "GET",
     url: "http://localhost:3000/uploadedImg?uploadedBy=" + uId,
     contentType: "application/json",
     success: function (result) {
-      let elemArr = JSON.parse(JSON.stringify(result));
+      const elemArr = JSON.parse(JSON.stringify(result));
 
       elemArr.forEach((element) => {
-        let elemData = element.data;
-        let serachKeys = " " + element.category + " " + element.hashtag;
+        const elemData = element.data;
+        const serachKeys = " " + element.category + " " + element.hashtag;
         post_container.append(
           '<div class="col  hovereffects' +
             serachKeys +
@@ -24,9 +24,6 @@ $(document).ready(() => {
             '" class="post-items" alt="post"></div>'
         );
       });
-    },
-    error: function (error) {
-     
-    },
+    }
   });
 });

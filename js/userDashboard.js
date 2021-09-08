@@ -1,4 +1,3 @@
-"use strict";
 $(function () {
   $("#NavMenuBar").on("click", function () {
     $("#sidebar").toggleClass("active");
